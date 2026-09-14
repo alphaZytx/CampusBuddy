@@ -1,0 +1,4 @@
+-- 019 — Publish Lost & Found privacy and retention terms separately so 018 stays immutable
+INSERT INTO legal_documents (document_type,version,title,content,effective_at) VALUES
+('PRIVACY','2026-09-lost-found','Privacy notice',
+'CampusBuddy uses account and campus-verification data, transaction records, safety reports, uploaded media, and location only when explicitly shared. Lost & Found posts are campus-visible, use only an approximate location, expire after 60 days, and are deleted 365 days after closure or expiry. Ownership-verification responses are private to the responder, post author, and authorised moderators. Unattached uploads are deleted after 24 hours. Other chat, report, dispute, notification, and account-retention periods remain as described in the Privacy Centre. You can export your data or deactivate/delete your account there.',now());

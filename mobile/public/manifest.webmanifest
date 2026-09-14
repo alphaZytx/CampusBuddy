@@ -1,0 +1,13 @@
+{
+  "name": "CampusBuddy — NIT Patna Bihta",
+  "short_name": "CampusBuddy",
+  "description": "Ask a fellow student for help, or earn by helping. NIT Patna Bihta Campus only.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1220",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

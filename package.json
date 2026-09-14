@@ -1,0 +1,51 @@
+{
+  "name": "campusbuddy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CampusBuddy — verified NIT Patna (Bihta Campus) peer-to-peer student marketplace",
+  "workspaces": [
+    "packages/shared",
+    "backend",
+    "mobile",
+    "admin"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,app,admin -c blue,green,magenta \"npm:dev:backend\" \"npm:dev:mobile\" \"npm:dev:admin\"",
+    "dev:backend": "npm run dev -w backend",
+    "dev:mobile": "npm run dev -w mobile",
+    "dev:admin": "npm run dev -w admin",
+    "db:migrate": "npm run migrate -w backend",
+    "db:seed": "npm run seed -w backend",
+    "db:reset": "npm run reset -w backend",
+    "setup": "npm install && npm run db:reset",
+    "build": "npm run build -w mobile && npm run build -w admin",
+    "start": "npm run start -w backend",
+    "test": "npm run test -w backend",
+    "test:watch": "npm run test:watch -w backend",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md,css}\"",
+    "test:e2e": "node scripts/e2e.mjs",
+    "android:apk": "npm run android:apk -w mobile",
+    "ci": "npm run typecheck && npm run lint && npm test && npm run build && npm audit --omit=dev --audit-level=high"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.10.2",
+    "concurrently": "^9.1.2",
+    "eslint": "^10.10.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.12.0",
+    "prettier": "^3.4.2",
+    "puppeteer-core": "^25.10.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.70.0"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

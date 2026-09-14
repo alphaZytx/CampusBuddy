@@ -1,0 +1,11 @@
+.git
+.github
+.env
+**/node_modules
+**/dist
+backend/.data
+backend/uploads
+mobile/android/.gradle
+mobile/android/app/build
+*.apk
+*.log

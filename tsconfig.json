@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "types": ["node"]
+  },
+  "include": [
+    "packages/shared/src/**/*.ts",
+    "backend/src/**/*.ts",
+    "backend/tests/**/*.ts",
+    "backend/seed/**/*.ts",
+    "mobile/src/**/*.ts",
+    "mobile/src/**/*.tsx",
+    "admin/src/**/*.ts",
+    "admin/src/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "**/dist"]
+}
